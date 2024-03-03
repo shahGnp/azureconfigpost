@@ -39,7 +39,7 @@ register_coco_instances("my_dataset_val", {}, "./dataset/combined_xview_damage_a
 # train_dataset_dicts = DatasetCatalog.get("my_dataset_train")
 
 val_metadata = MetadataCatalog.get("my_dataset_val")
-# val_dataset_dicts = DatasetCatalog.get("my_dataset_val")
+val_dataset_dicts = DatasetCatalog.get("my_dataset_val")
 
 cfg = get_cfg()
 cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
@@ -77,4 +77,4 @@ def detectImage(image_path):
 
 
 
-# detectImage('./guatemala-volcano_00000000_pre_disaster.png')
+# detectImage('./guatemala-volcano_00000000_post_disaster.png')
